@@ -6,6 +6,9 @@
   "repository": "git@github.com:ParamagicDev/hotkey-listener.git",
   "author": "paramagicdev <konnor5456@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": "^10.12.0 || >=12.0.0"
+  },
   "@pika/pack": {
     "pipeline": [
       [
