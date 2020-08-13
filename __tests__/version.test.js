@@ -3,5 +3,5 @@
 import pkg from "../../package.json"
 
 test('returns a valid version number', () => {
-  expect(package.version).toNot
+  expect(pkg.version).toNotBeNil()
 });

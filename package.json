@@ -59,5 +59,8 @@
     "build": "pika build",
     "release": "standard-version",
     "deploy": "yarn build && yarn release"
+  },
+  "dependencies": {
+    "hotkeys-js": "^3.8.1"
   }
 }
