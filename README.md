@@ -5,17 +5,22 @@ A modest js library that dispatches low-level keyboard events in the form of Cus
 ## Issues
 
 Hotkey listener is 5.99kb according to Unpkg.
-[https://unpkg.com/browse/hotkey-listener@0.0.2/dist-web/](https://unpkg.com/browse/hotkey-listener@0.0.2/dist-web/)
+[https://unpkg.com/browse/hotkey-listener/](https://unpkg.com/browse/hotkey-listener@0.0.2/dist-web/)
+
+Hotkey Listener is 2.6kb according to Bundlephobia.
+[https://bundlephobia.com/result?p=hotkey-listener@0.0.3](https://bundlephobia.com/result?p=hotkey-listener@0.0.3)
 
 This is partly because it uses
 [Hotkeys](https://github.com/jaywcjlove/hotkeys) as a dependency and
-bundles it up into a single file.
+bundles it up into a single file. I would recommend you package this
+with a bundler like [Snowpack](https://www.snowpack.dev/),
+[Webpack](https://webpackjs.org/), [Rollup](https://rollupjs.org).
 
 Hotkey Listener can only be registered on `HTMLElement`'s that implement
 the "KeyboardEvent" interface.
 IE: `window`, `input`, `textarea`, `document`
 
-## Usage
+## Installation
 
 ```bash
 npm install hotkey-listener
@@ -24,6 +29,8 @@ npm install hotkey-listener
 
 yarn add hotkey-listener
 ```
+
+## Usage
 
 ```javascript
 // index.js
@@ -85,4 +92,8 @@ hotkeyListener.register({
 
 ## How it works?
 
-Hotkey-Listener under the hood uses [the hotkeys library] (https://github.com/jaywcjlove/hotkeys) to dispatch [CustomEvents](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent) to the client.
+Hotkey-Listener under the hood uses [the `hotkeys` library](https://github.com/jaywcjlove/hotkeys) to dispatch [CustomEvents](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent) to the client.
+
+## Contributors
+
+
