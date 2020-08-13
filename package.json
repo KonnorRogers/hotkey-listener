@@ -52,6 +52,9 @@
     "jest": "^26.4.0"
   },
   "scripts": {
-    "test": "jest"
+    "lint": "eslint .",
+    "format": "eslint . --fix",
+    "test": "jest",
+    "build": "pika build"
   }
 }
