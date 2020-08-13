@@ -34,9 +34,15 @@ function register({
 
     const keydown = Object.assign(keyup, { keyup: false, keydown: true });
 
-    hotkeys(key, keyup, () => element.dispatchEvent(keyupEvent));
+    hotkeys(key, keyup, (event) => {
+      event.preventDefault()
+      element.dispatchEvent(keyupEvent)
+    });
 
-    hotkeys(key, keydown, () => element.dispatchEvent(keydownEvent));
+    hotkeys(key, keydown, (event) => {
+      event.preventDefault()
+      element.dispatchEvent(keydownEvent)
+    });
   });
 }
 
