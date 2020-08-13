@@ -3,7 +3,10 @@
   "version": "0.0.2",
   "description": "A modest js library to provide keyboard events in the form of DOM events.",
   "main": "index.js",
-  "repository": "git@github.com:ParamagicDev/hotkey-listener.git",
+  "repository": {
+    "type": "git",
+    "git@github.com:ParamagicDev/hotkey-listener.git"
+  },
   "author": "paramagicdev <konnor5456@gmail.com>",
   "license": "MIT",
   "engines": {

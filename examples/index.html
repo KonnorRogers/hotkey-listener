@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title></title>
-  <script type="module">
-    import listener from "/pkg/dist-web/index.bundled.js"
-
+  <script src="https://unpkg.com/hotkey-listener"></script>
+  <script type="text/javascript">
     listener.register({keys: ["ctrl+q"]})
 
     window.addEventListener("keydown:ctrl+q", () => console.log("Hi there"))
