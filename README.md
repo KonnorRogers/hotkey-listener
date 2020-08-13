@@ -18,7 +18,8 @@ with a bundler like [Snowpack](https://www.snowpack.dev/),
 
 Hotkey Listener can only be registered on `HTMLElement`'s that implement
 the "KeyboardEvent" interface.
-IE: `window`, `input`, `textarea`, `document`
+
+For example: `window`, `input`, `textarea`, `document`
 
 ## Installation
 
