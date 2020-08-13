@@ -7,7 +7,7 @@ A modest js library that dispatches low-level keyboard events in the form of Cus
 Hotkey listener is 5.99kb according to Unpkg.
 [https://unpkg.com/browse/hotkey-listener/](https://unpkg.com/browse/hotkey-listener@0.0.2/dist-web/)
 
-Hotkey Listener is 2.6kb according to Bundlephobia.
+Hotkey Listener is 2.6kb GZipped according to Bundlephobia.
 [https://bundlephobia.com/result?p=hotkey-listener@0.0.3](https://bundlephobia.com/result?p=hotkey-listener@0.0.3)
 
 This is partly because it uses
