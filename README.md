@@ -43,7 +43,7 @@ yarn add hotkey-listener
     })
 
     document.addEventListener("keydown:ctrl+d", (event) => {
-      console.log(`${event.detail.key}` pushed) // ctrl+d pressed
+      console.log(`${event.detail.key} pushed`) // ctrl+d pressed
     })
 ```
 
