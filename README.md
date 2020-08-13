@@ -2,6 +2,14 @@
 
 "A modest js library that dispatches low-level keyboard events in the form of CustomEvents."
 
+## Issues
+
+Hotkey listener is 5.99kb according to Unpkg.
+[https://unpkg.com/browse/hotkey-listener@0.0.2/dist-web/](https://unpkg.com/browse/hotkey-listener@0.0.2/dist-web/)
+
+This is partly because it uses
+[Hotkeys](https://github.com/jaywcjlove/hotkeys) as a dependency.
+
 ## Usage
 
 ```bash
@@ -69,4 +77,4 @@ hotkeyListener.register({
 
 ## How it works?
 
-Hotkey-Listener under the hood uses [the `hotkeys` library] (https://github.com/jaywcjlove/hotkeys) to dispatch [CustomEvents](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent).
+Hotkey-Listener under the hood uses [the `hotkeys` library] (https://github.com/jaywcjlove/hotkeys) to dispatch [CustomEvents](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent) to the client.
