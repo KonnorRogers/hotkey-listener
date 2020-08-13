@@ -59,7 +59,7 @@
     "test": "jest",
     "build": "pika build",
     "release": "standard-version",
-    "deploy": "yarn build && yarn release"
+    "deploy": "yarn build && yarn release && yarn publish"
   },
   "dependencies": {
     "hotkeys-js": "^3.8.1"
