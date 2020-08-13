@@ -1,6 +1,6 @@
 # hotkey-listener
 
-A modest js library to provide low-level keyboard events in the form of DOM events.
+"A modest js library that dispatches low-level keyboard events in the form of CustomEvents."
 
 ## Usage
 
