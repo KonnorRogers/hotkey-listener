@@ -3,11 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title></title>
-  <script src="https://unpkg.com/hotkey-listener"></script>
-  <script type="text/javascript">
-    listener.register({keys: ["ctrl+q"]})
+  <script type="module">
+    import hotkeyListener from "../pkg/dist-web/index.bundled.js"
 
-    window.addEventListener("keydown:ctrl+q", () => console.log("Hi there"))
+    hotkeyListener.register({
+      element: document,
+      keys: [
+        "f5",
+        "ctrl+d"
+      ]
+    })
+
+    document.addEventListener("keyup:f5", (event) => {
+      // Prevent window refresh
+      event.preventDefault()
+      console.log("f5 pushed")
+    })
+
+    document.addEventListener("keydown:ctrl+d", (event) => {
+      console.log(`${event.detail.key}` pushed) // ctrl+d pressed
+    })
   </script>
 </head>
 <body>

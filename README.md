@@ -8,7 +8,12 @@ Hotkey listener is 5.99kb according to Unpkg.
 [https://unpkg.com/browse/hotkey-listener@0.0.2/dist-web/](https://unpkg.com/browse/hotkey-listener@0.0.2/dist-web/)
 
 This is partly because it uses
-[Hotkeys](https://github.com/jaywcjlove/hotkeys) as a dependency.
+[Hotkeys](https://github.com/jaywcjlove/hotkeys) as a dependency and
+bundles it up into a single file.
+
+Hotkey Listener can only be registered on `HTMLElement`'s that implement
+the "KeyboardEvent" interface.
+IE: `window`, `input`, `textarea`, `document`
 
 ## Usage
 
@@ -23,27 +28,23 @@ yarn add hotkey-listener
 ```javascript
 // index.js
 
-import hotkeyListener from "hotkey-listener"
+    hotkeyListener.register({
+      element: document,
+      keys: [
+        "f5",
+        "ctrl+d"
+      ]
+    })
 
-hotkeyListener.register({
-  element: window,
-  keys: [
-    "f5",
-    "ctrl+d"
-  ]
-})
+    document.addEventListener("keyup:f5", (event) => {
+      // Prevent window refresh
+      event.preventDefault()
+      console.log("f5 pushed")
+    })
 
-div = document.getElementById("mydiv")
-
-div.addEventListener("keyup:f5", (event) => {
-  // Prevent window refresh
-  event.preventDefault()
-  console.log("f5 pushed")
-})
-
-div.addEventListener("keydown:ctrl+d", (event) => {
-  console.log(`${event.detail.key}` pushed`)
-}) // => ctrl+d pushed
+    document.addEventListener("keydown:ctrl+d", (event) => {
+      console.log(`${event.detail.key}` pushed) // ctrl+d pressed
+    })
 ```
 
 Hotkey listener creates custom `keyup:<keystroke>` and `keydown:<keystroke>` events.
