@@ -1,5 +1,4 @@
 import hotkeys from "hotkeys-js";
-
 /**
  * @param {HTMLElement} [element=window] - The element to attach the hotkey listener to
  * @param {String[]} keyAry - A string of keys IE: 'enter', 'space', etc
@@ -13,32 +12,38 @@ import hotkeys from "hotkeys-js";
  *   eventOptions also supports the detail: key
  *   https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent
  */
+
 function register({
   element = window,
   keys,
   hotkeyOptions = {},
-  eventOptions = {},
+  eventOptions = {}
 }) {
-  keys.forEach((key) => {
-    Object.assign(eventOptions, { detail: { key: key } })
+  keys.forEach(key => {
+    Object.assign(eventOptions, {
+      detail: {
+        key: key
+      }
+    });
     const keyupEvent = new CustomEvent(`keyup:${key}`, eventOptions);
     const keydownEvent = new CustomEvent(`keydown:${key}`, eventOptions);
-
     const keyup = {
       keyup: true,
       keydown: false,
       element: element,
       scope: hotkeyOptions.scope,
-      splitKey: hotkeyOptions.splitKey,
+      splitKey: hotkeyOptions.splitKey
     };
-
-    const keydown = Object.assign(keyup, { keyup: false, keydown: true });
-
+    const keydown = Object.assign(keyup, {
+      keyup: false,
+      keydown: true
+    });
     hotkeys(key, keyup, () => element.dispatchEvent(keyupEvent));
-
     hotkeys(key, keydown, () => element.dispatchEvent(keydownEvent));
   });
 }
 
-const hotkeyListener = { register }
-export default hotkeyListener
+const hotkeyListener = {
+  register
+};
+export default hotkeyListener;

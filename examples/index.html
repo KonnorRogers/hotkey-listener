@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <script type="module">
+    import listener from "/pkg/dist-web/index.bundled.js"
+
+    listener.register({keys: ["ctrl+q"]})
+
+    window.addEventListener("keydown:ctrl+q", () => console.log("Hi there"))
+  </script>
+</head>
+<body>
+</body>
+</html>
