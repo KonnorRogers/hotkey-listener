@@ -18,6 +18,7 @@ yarn add hotkey-listener
 import hotkeyListener from "hotkey-listener"
 
 hotkeyListener.register({
+  // Registers to the window
   keys: [
     "f5",
     "ctrl+d"
