@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/ParamagicDev/hotkey-listener/compare/v0.0.3...v0.0.4) (2020-08-13)
+
+
+### Features
+
+* preventDefault() added to all keybind events ([5f24bed](https://github.com/ParamagicDev/hotkey-listener/commit/5f24bed8bb70d01a84ac999120cae150a2dd37fe))
+
 ### [0.0.3](https://github.com/ParamagicDev/hotkey-listener/compare/v0.0.2...v0.0.3) (2020-08-13)
 
 

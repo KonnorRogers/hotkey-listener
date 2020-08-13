@@ -1,6 +1,6 @@
 {
   "name": "hotkey-listener",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A modest js library to provide keyboard events in the form of DOM events.",
   "main": "index.js",
   "url": "https://github.com/ParamagicDev/hotkey-listener",
