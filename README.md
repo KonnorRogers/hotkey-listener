@@ -38,8 +38,7 @@ div.addEventListener("keydown:ctrl+d", (event) => {
 }) // => ctrl+d pushed
 ```
 
-Hotkey listener creates custom `keyup:<keystroke>` and
-`keydown:<keystroke>` events.
+Hotkey listener creates custom `keyup:<keystroke>` and `keydown:<keystroke>` events.
 
 Events also record the key that was pressed via `event.detail.key`
 
@@ -70,7 +69,4 @@ hotkeyListener.register({
 
 ## How it works?
 
-Hotkey-Listener under the hood uses the library
-[https://github.com/jaywcjlove/hotkeys](https://github.com/jaywcjlove/hotkeys)
-to dispatch
-[CustomEvents](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent).
+Hotkey-Listener under the hood uses [the `hotkeys` library] (https://github.com/jaywcjlove/hotkeys) to dispatch [CustomEvents](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent).
