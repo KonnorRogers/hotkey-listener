@@ -18,7 +18,7 @@ yarn add hotkey-listener
 import hotkeyListener from "hotkey-listener"
 
 hotkeyListener.register({
-  // Registers to the window
+  element: window,
   keys: [
     "f5",
     "ctrl+d"
@@ -26,10 +26,16 @@ hotkeyListener.register({
 })
 
 div = document.getElementById("mydiv")
-div.addEventListener("keyup:f5", () => console.log("f5 pushed"))
-div.addEventListener("keydown:ctrl+f5", (event) => {
+
+div.addEventListener("keyup:f5", (event) => {
+  // Prevent window refresh
+  event.preventDefault()
+  console.log("f5 pushed")
+})
+
+div.addEventListener("keydown:ctrl+d", (event) => {
   console.log(`event.detail.key` pushed`)
-}) // => ctrl+f5 pushed
+}) // => ctrl+d pushed
 ```
 
 Hotkey listener creates custom `keyup:<keystroke>` and
