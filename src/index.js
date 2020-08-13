@@ -34,13 +34,11 @@ function register({
 
     const keydown = Object.assign(keyup, { keyup: false, keydown: true });
 
-    hotkeys(key, keyup, (event) => {
-      event.preventDefault()
+    hotkeys(key, keyup, () => {
       element.dispatchEvent(keyupEvent)
     });
 
-    hotkeys(key, keydown, (event) => {
-      event.preventDefault()
+    hotkeys(key, keydown, () => {
       element.dispatchEvent(keydownEvent)
     });
   });

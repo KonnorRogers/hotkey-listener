@@ -28,23 +28,29 @@ yarn add hotkey-listener
 ```javascript
 // index.js
 
-    hotkeyListener.register({
-      element: document,
-      keys: [
-        "f5",
-        "ctrl+d"
-      ]
-    })
+hotkeyListener.register({
+  element: window,
+  keys: [
+    "f5",
+    "ctrl+d"
+  ],
+  eventOptions: {
+    // Required to preventDefault() in chrome
+    cancelable: true
+  }
+})
 
-    document.addEventListener("keyup:f5", (event) => {
-      // Prevent window refresh
-      event.preventDefault()
-      console.log("f5 pushed")
-    })
+window.addEventListener("keydown:f5", (event) => {
+  // Prevent window refresh
+  event.preventDefault()
+  console.log("f5 pushed")
+  console.log(event.cancelable)
+})
 
-    document.addEventListener("keydown:ctrl+d", (event) => {
-      console.log(`${event.detail.key} pushed`) // ctrl+d pressed
-    })
+window.addEventListener("keydown:ctrl+d", (event) => {
+  event.preventDefault()
+  console.log(`${event.detail.key} pushed`) // ctrl+d pressed
+})
 ```
 
 Hotkey listener creates custom `keyup:<keystroke>` and `keydown:<keystroke>` events.
