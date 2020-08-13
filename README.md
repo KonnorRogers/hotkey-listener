@@ -1,6 +1,6 @@
 # hotkey-listener
 
-"A modest js library that dispatches low-level keyboard events in the form of CustomEvents."
+A modest js library that dispatches low-level keyboard events in the form of CustomEvents.
 
 ## Issues
 
@@ -42,7 +42,7 @@ div.addEventListener("keyup:f5", (event) => {
 })
 
 div.addEventListener("keydown:ctrl+d", (event) => {
-  console.log(`event.detail.key` pushed`)
+  console.log(`${event.detail.key}` pushed`)
 }) // => ctrl+d pushed
 ```
 
@@ -71,10 +71,11 @@ hotkeyListener.register({
     cancelable: <Boolean>, // default false
     composed: <Boolean>, // default false
     detail: { key: "<key pressed>" }
+    // Detail is an Object you can attach other [key: value] pairs to
   },
 })
 ```
 
 ## How it works?
 
-Hotkey-Listener under the hood uses [the `hotkeys` library] (https://github.com/jaywcjlove/hotkeys) to dispatch [CustomEvents](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent) to the client.
+Hotkey-Listener under the hood uses [the hotkeys library] (https://github.com/jaywcjlove/hotkeys) to dispatch [CustomEvents](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent) to the client.
