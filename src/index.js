@@ -44,5 +44,5 @@ function register({
   });
 }
 
-const hotkeyListener = { register }
+const hotkeyListener = { register, hotkeys }
 export default hotkeyListener
