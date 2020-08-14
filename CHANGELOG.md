@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/ParamagicDev/hotkey-listener/compare/v0.0.4...v0.0.5) (2020-08-14)
+
+
+### Features
+
+* expose 'hotkeys' api directly ([3302202](https://github.com/ParamagicDev/hotkey-listener/commit/33022026179f4949bc9fc400ea227435edde934b))
+
 ### [0.0.4](https://github.com/ParamagicDev/hotkey-listener/compare/v0.0.3...v0.0.4) (2020-08-13)
 
 
