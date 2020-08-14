@@ -85,6 +85,20 @@ hotkeyListener.register({
 })
 ```
 
+## Hotkeys API
+
+Should you need more finely grained tuning of `hotkeys`, you can
+communicate with the `hotkeys` API directly. For example, to enable
+hotkeys on `input`, `textarea`, etc, you can do the following:
+
+```bash
+import hotkeyListener from "hotkey-listener"
+
+hotkeyListener.hotkeys.filter(() => true)
+```
+
+[https://github.com/jaywcjlove/hotkeys#filter](https://github.com/jaywcjlove/hotkeys#filter)
+
 ## How it works?
 
 Hotkey-Listener under the hood uses [the `hotkeys` library](https://github.com/jaywcjlove/hotkeys) to dispatch [CustomEvents](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent) to the client.
