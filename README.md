@@ -2,7 +2,7 @@
 
 A modest js library that dispatches low-level keyboard events in the form of CustomEvents.
 
-## Issues
+## Foreword
 
 Hotkey listener is 5.99kb according to Unpkg.
 [https://unpkg.com/browse/hotkey-listener/](https://unpkg.com/browse/hotkey-listener@0.0.2/dist-web/)
