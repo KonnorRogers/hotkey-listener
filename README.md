@@ -94,7 +94,9 @@ hotkeys on `input`, `textarea`, etc, you can do the following:
 ```bash
 import hotkeyListener from "hotkey-listener"
 
-hotkeyListener.hotkeys.filter(() => true)
+hotkeyListener.hotkeys.filter = function(event) {
+  return true
+}
 ```
 
 [https://github.com/jaywcjlove/hotkeys#filter](https://github.com/jaywcjlove/hotkeys#filter)
