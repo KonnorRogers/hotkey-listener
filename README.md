@@ -29,6 +29,7 @@ yarn add hotkey-listener
 
 ```javascript
 // index.js
+import hotkeyListener from "hotkey-listener"
 
 hotkeyListener.register({
   element: window,
@@ -97,6 +98,32 @@ import hotkeyListener from "hotkey-listener"
 hotkeyListener.hotkeys.filter = function(event) {
   return true
 }
+```
+
+## Usage with Stimulus
+
+```js
+// application.js
+import hotkeyListener from "hotkey-listener"
+
+hotkeyListener.register({
+  element: window,
+  keys: [
+    "f5",
+    "ctrl+d"
+  ],
+  eventOptions: {
+    // Required to preventDefault() in chrome
+    cancelable: true
+  }
+})
+```
+
+Then in your HTML for a stimulus controller you can do this:
+
+```html
+<div data-action="keydown:f5@window->my-controller#doStuff">
+</div>
 ```
 
 [https://github.com/jaywcjlove/hotkeys#filter](https://github.com/jaywcjlove/hotkeys#filter)
